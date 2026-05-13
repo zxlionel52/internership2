@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Excellence Academy</title>
+    <style>
+
+        body { font-family: 'Inter', sans-serif; 
+        margin: 0px;
+        padding: 0px;
+         color: black;
+        background-image: url(back.png); 
+        background-size: cover; 
+        }
+        .l1 { max-width: 900px;
+             margin: 50px auto 50px;
+              background: #00A1DE;
+              font-weight: 600;
+               padding: 50px;
+                border-radius: 15px;
+                 box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+                 }
+        
+        h2 {
+             color: #080808;
+              margin-bottom: 20px;
+             }
+        .l2 {
+             display: grid;
+              grid-template-columns: 1fr 1fr;
+               gap: 30px;
+                margin: 40px 0;
+             }
+        .l3 {
+             padding: 25px;
+              border-radius: 10px;
+               background: #f1f5f9;
+                border-top: 4px solid var(--primary);
+             }
+        
+        .l4 {
+             list-style: none;
+              padding: 0; }
+        .l4 li {
+             margin-bottom: 10px;
+              padding-left: 25px;
+               position: relative; }
+               .l5 {
+    background: linear-gradient(#667eea,#764ba2);
+    width: 900px;
+    height: 10%;
+    margin-left: 250px;
+    border-radius: 60px;
+}
+
+.l6 {
+    display: flex;
+    flex-direction: row;      
+    justify-content: space-between; 
+    align-items: center;
+    padding-right: 30px;
+}
+
+.l7 {
+    margin-left: 100px;
+    font-size: 50px;
+    font-weight: bold;
+    color: var(--white);
+    gap: 10px;
+}
+.menu-btn {
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 30px;
+    color: white;
+    
+}
+
+.menu-overlay {
+    height: 100%;
+    width: 0; 
+    top: 00px;
+    position: fixed;   
+    background-color: rgba(0, 0, 0, 0.95);
+    overflow-x: hidden;
+    padding-top: 60px;
+    transition: 0.1s;
+    
+}
+
+.menu-overlay.active {
+    width: 250px;
+    
+    border-bottom: 5px yellow solid;
+}
+
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px; 
+    font-size: 36px;
+    color: white;
+    cursor: pointer;
+}
+.close-btn:hover {
+    animation: spine 1s ease-in-out;
+   
+}
+@keyframes spine {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(360deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+.menu-links a {
+    padding: 15px 32px;
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+    font-family: Arial, sans-serif;
+}
+
+.menu-links a:hover {
+    color: #f1f1f1;
+    background-color: #333;
+    border-radius: 20px;
+    border-bottom: 5px yellow solid;
+}
+
+.menu-container {
+    display: flex;
+    align-items: center;
+}
+.l39{
+    height: 300px;
+    width: 100%;
+    background-color: #667eea;
+    margin-top: 460px;
+    margin-left: 0px;
+    position: sticky;
+
+}
+.l40{
+    border-radius: 70px;
+    height: 50px;
+    background-color: #d0d0d0;
+    width: 50px;
+    margin-left: 1250px;
+    background-image: url(lio.png);
+    background-size: cover;
+   
+}
+.l41{
+    border-radius: 70px;
+    height: 50px;
+    background-color: #d0d0d0;
+    width: 50px;
+    margin-left: 1120px;
+    margin-top: -50px;
+    background-image: url(face.png);
+    background-size: cover;
+   
+}
+.l42{
+    border-radius: 70px;
+    height: 50px;
+    background-color: #d0d0d0;
+    width: 50px;
+    margin-left: 1185px;
+    margin-top: -50px;
+    background-image: url(you.png);
+    background-size: cover;
+   
+}
+.l43{
+    margin-top: 55px;
+    position: absolute;
+    margin-left: 400px;
+    color: #d0d0d0;
+}
+.l44{
+    margin-top: -90px;
+    margin-left: 100px;
+    border-radius: 20px;
+    height: 200px;
+    width: 400px;
+    background-color: #28a745;
+}
+#BO{
+    position: absolute;
+    margin-left: 700px;
+    margin-top: 80px;
+    font-size: 15px;
+    
+}
+
+    </style>
+</head>
+<body>
+<nav class="l5">
+    <div class="l6">
+        <div class="l7">
+            <span>Groupe Scolaire KABARE</span>
+        </div>
+        <div class="menu-container">
+            <span onclick="toggleMenu()" class="menu-btn">☰ Menu</span>
+        </div>
+    </div>
+</nav>
+<div class="l1">
+    <h2>Our Story</h2>
+    <p>Established with the vision of nurturing academic brilliance and moral integrity, Excellence Academy has grown into one of the most respected secondary schools in Rwanda. Located in the heart of Nyarugenge, we serve students from all walks of life, providing a platform where innovation meets tradition.</p>
+
+    <div class="l2">
+        <div class="l3">
+            <h3>Our Mission</h3>
+            <p>To provide high-quality education that inspires students to reach their full potential and contribute positively to the socio-economic development of Rwanda.</p>
+        </div>
+        <div class="l3">
+            <h3>Our Vision</h3>
+            <p>To be the premier center for academic excellence, innovation, and character building in East Africa.</p>
+        </div>
+    </div>
+
+    <h2>Why Choose Us?</h2>
+    <ul class="l4">
+        <li><strong>Aligned with NESA/REB Standards:</strong> We follow the official Rwandan national curriculum with advanced pedagogical techniques.</li>
+        <li><strong>State-of-the-art Facilities:</strong> From our modern science laboratories to our digital libraries.</li>
+        <li><strong>Holistic Development:</strong> We balance rigorous academics with sports, music, and community service.</li>
+        <li><strong>Experienced Faculty:</strong> Our teachers are dedicated, qualified professionals committed to student mentorship.</li>
+    </ul>
+
+    <h2>Our Core Values</h2>
+    <p>Everything we do is guided by our commitment to:</p>
+    <ul class="l4">
+        <li><strong>Integrity:</strong> Honesty in all academic and personal pursuits.</li>
+        <li><strong>Unity (Ndi Umunyarwanda):</strong> Fostering a spirit of togetherness and national pride.</li>
+        <li><strong>Excellence:</strong> Striving for the best in every task we undertake.</li>
+    </ul>
+</div>
+<div id="menu" class="menu-overlay">
+        <span class="close-btn" onclick="toggleMenu()">x</span>
+        <div class="menu-links">
+            <a href="home.html">HOME</a>
+            <a href="About.html">ABOUT US</a>
+            <a href="cod.html">ACADEMICS</a>
+            <a href="Services.html">SERVICES</a>
+            <a href="admission.html">ADMISSION</a>
+            <a href="gallery.html">GALLERY</a>
+            <a href="conatct.html">CONTACT US</a>
+            <a href="help.html">HELP</a>
+            <input type="button" class="btn-login" onclick="window.location.href='index.html';" value="←LOGOUT">
+        </div>
+        <div class="l39">
+        <P id="BO"><b>YOU CAN ALSO FIND US ON SOCIAL MEDIA PLATFORMS:</b></P>
+        <br><br><br>
+        <div class="l40"></div>
+         <div class="l41"></div>
+          <div class="l42"></div>
+          <div class="l44"></div>
+          <p class="l43">&copy;COPYRIGHT GSKEBARE 2025-2026 OFFICIAL SCHOOL MANAGMENT WEBSITE</p>
+    </div>
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById("menu");
+            menu.classList.toggle("active");
+        }
+    </script>  
+</body>
+</html>

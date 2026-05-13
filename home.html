@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GS KABARE - Home</title>
+    <link rel="stylesheet" type="text/css" href="home.css">
+</head>
+<body>
+    <nav class="l1">
+    <div class="l2">
+        <div class="l3">
+            <span>Groupe Scolaire KABARE</span>
+        </div>
+        <div class="menu-container">
+            <span onclick="toggleMenu()" class="menu-btn">☰ Menu</span>
+        </div>
+    </div>
+</nav>
+            
+            
+        
+           
+    <section class="l7">
+        <div class="l7-content">
+            <h1>Welcome to GS KABARE</h1>   
+        </div>
+    </section>
+<div class="l39">
+        <P id="BO"><b>YOU CAN ALSO FIND US ON SOCIAL MEDIA PLATFORMS:</b></P>
+        <br><br><br>
+        <div class="l40"></div>
+         <div class="l41"></div>
+          <div class="l42"></div>
+          <div class="l44"></div>
+          <p class="l43">&copy;COPYRIGHT GSKEBARE 2025-2026 OFFICIAL SCHOOL MANAGMENT WEBSITE</p>
+
+    </div>
+    <div id="menu" class="menu-overlay">
+        <span class="close-btn" onclick="toggleMenu()">x</span>
+        <div class="menu-links">
+            <a href="home.html">HOME</a>
+            <a href="About.html">ABOUT US</a>
+            <a href="cod.html">ACADEMICS</a>
+            <a href="Services.html">SERVICES</a>
+            <a href="admission.html">ADMISSION</a>
+            <a href="gallery.html">GALLERY</a>
+            <a href="conatct.html">CONTACT US</a>
+            <a href="help.html">HELP</a>
+            <input type="button" class="btn-login" onclick="window.location.href='index.html';" value="←LOGOUT">
+        </div>
+    </div>
+        <script>
+        function toggleMenu() {
+            const menu = document.getElementById("menu");
+            menu.classList.toggle("active");
+        }
+    </script>   
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal Login | Excellence Academy</title>
+   <link rel="stylesheet" type="text/css" href="index.css">
+</head>
+<body>
+
+<div class="auth-container">
+    <div class="tabs">
+        <div class="tab active" id="tabLogin">Login</div>
+    </div>
+<div id="ra">
+           <strong>Notice:</strong><strong> USE THIS</strong><br>username: <strong>admin</strong><br>password: <strong>admin123</strong>
+        </div>
+    <form id="loginForm" action="home.html" method="post" >
+        <div class="form-group">
+            <label>Username</label>
+            <input type="text" id="op" placeholder="Enter your username">
+        </div>
+        <div class="form-group">
+            <label>Password</label>
+            <input type="password" id="ap" placeholder="Enter your password">
+        </div>
+        <button type="submit" class="btn-auth" onclick="return log();">Login</button>
+    </form>
+
+  
+</div>
+
+<script>
+  
+    function log(){
+        var user=document.getElementById("op").value;
+        var pass=document.getElementById("ap").value;
+
+        if(!user|| !pass)
+        {
+            alert("Please fill in all fields.");
+            return false;
+        }
+        else if (!user) {
+            alert("please fill in a vailed username or email");
+            return false;
+        }
+        else if (!pass) {
+            alert("please fill in a vailed password");
+            return false;
+        }
+         else if (!pass) {
+            alert("please create a password");
+            return false;
+        } 
+        else if(pass!=="admin123")
+        {
+            alert("Invalid password. Please try again.");
+            return false;
+        }
+        else if(user!=="admin")
+        {
+            alert("Invalid username. Please try again.");
+            return false;
+        }
+        else {
+            alert("Login successful! Welcome to the Excellence Academy Portal.");
+            return true;
+        }
+    }
+   
+</script>
+
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trainer Portal</title>
+    <link rel="stylesheet" type="text/css" href="home.css">
+</head>
+<body>
+    <div class="l45">
+        <a href="Services.html" class="l91">↩Back to Services</a>
+            <div class="l90">
+                <h1>Trainer Portal</h1>
+                <p>Welcome back! Manage your classes, grades, and student assignments.</p>
+            </div>
+                        <div class="l47">
+                            <div class="l48">
+            <strong>Notice:</strong> Please ensure you have your <strong>Primary Leaving Education (PLE)</strong> or <strong>O-Level National Exam</strong> results ready before starting.
+        </div>
+                            <form>
+                            <h3 class="l49">Personal Information</h3>
+                            <div class="l50">
+                                <div class="l51">
+                            <label>Full Name:</label>
+                            <input type="text" id="op"></div>
+                            <div class="l51">
+                            <label>Email:</label>
+                            <input type="email" id="up"></div>
+                            <div class="l51">
+                            <label>Phone:</label>
+                            <input type="tel" id="rp"></div>
+                            <div class="l51">
+                            <label>Employee ID:</label>
+                            <input type="number" id="zp"></div>
+                            <div class="l51">
+                            <label>Department:</label>
+                            <input type="text" id="mp"></div>
+                            <div class="l51">
+                            <label>Qualification:</label>
+                            <input type="text" id="in"></div>
+                            <div class="l51">
+                            <label>Join Date:</label>
+                            <input type="text" id="on"></div>
+                        <input type="button" class="l53" value="GET STARTED" onclick="li();">
+                        </div>
+                        </form>
+                    </div>
+    </div>
+    <div id="sp"></div>
+    <div class="l39">
+        <P id="BO"><b>YOU CAN ALSO FIND US ON SOCIAL MEDIA PLATFORMS:</b></P>
+        <br><br><br>
+        <div class="l40"></div>
+         <div class="l41"></div>
+          <div class="l42"></div>
+          <div class="l44"></div>
+          <p class="l43">&copy;COPYRIGHT GSKEBARE 2025-2026 OFFICIAL SCHOOL MANAGMENT WEBSITE</p>
+
+    </div>
+    <script>
+function li() {
+    const name = document.getElementById("op").value;
+    const email = document.getElementById("up").value;
+    const phone = document.getElementById("rp").value;
+    const id = document.getElementById("zp").value;
+    const jd = document.getElementById("on").value;
+    const department = document.getElementById("mp").value;
+    const qualification = document.getElementById("in").value;
+    let messageBox = document.getElementById("sp");
+
+   
+    messageBox.style.display = "block";
+
+    
+    if (!name || !email || !phone || !id || !jd || !department || !qualification) {
+        messageBox.style.background = "red";
+        messageBox.innerHTML = "Please fill all required fields.";
+        return false;
+    }
+
+    if (id.length < 16) {
+        messageBox.style.background = "red";
+        messageBox.innerHTML = "ID must be 16 digits.";
+        return false;
+    }
+
+
+    if (phone.length < 10) {
+        messageBox.style.background = "red";
+        messageBox.innerHTML = "Enter a valid phone number.";
+        return false;
+    }
+
+    messageBox.style.background = "green";
+    messageBox.innerHTML =`
+        Registration Successful!<br>
+        Name: ${name}<br>
+        Age: ${age}<br>
+        other details needed will be complited at our headquotal.
+    `;
+    setTimeout(() => {
+        messageBox.style.display = "none";
+    }, 5000);
+
+    return true;
+}
+    </script>
+</body>
+</html>

@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Registration | EduHub</title>
+    <style>
+        
+        body { 
+            font-family: 'Segoe UI', sans-serif;
+             background-image:url(back.png);
+             background-size: cover;
+              padding: 40px 20px;
+               color: #334155;
+             }
+        .l1 {
+             max-width: 800px;
+              margin: auto;
+               background: white;
+                padding: 40px;
+                 border-radius: 12px;
+                  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+                   border-top: 8px solid #00A1DE;
+                 }
+                 .l1 a{
+                    text-decoration: none;
+                    color: black;
+                    font-weight: 600;
+                 }
+        
+        h1 { 
+            color: #20603D;
+             margin-bottom: 30px;
+              text-align: center;
+             }
+        h3 {
+             color: #00A1DE;
+              border-bottom: 2px solid #e2e8f0;
+               padding-bottom: 10px;
+                margin-top: 30px;
+                 margin-bottom: 20px;
+                 }
+
+        .l2 { 
+            display: grid;
+             grid-template-columns: 1fr 1fr;
+              gap: 20px;
+             }
+        .l3 {
+             grid-column: span 2;
+             }
+        
+        label {
+             display: block;
+              font-size: 0.85rem;
+               font-weight: 600;
+                margin-bottom: 6px;
+             }
+        input, select {
+             width: 100%;
+              padding: 12px;
+               border: 1px solid #cbd5e1;
+                border-radius: 8px;
+                 outline: none;
+                 }
+        input:focus {
+             border-color: #00A1DE;
+              box-shadow: 0 0 0 3px rgba(0, 161, 222, 0.1);
+             }
+        
+        .l4 {
+             margin-top: 40px;
+              display: flex;
+               justify-content: flex-end;
+                gap: 15px;
+             }
+        button {
+             padding: 12px 30px;
+              border-radius: 8px;
+               border: none;
+                font-weight: 600;
+                 cursor: pointer;
+                  transition: 0.3s;
+                 }
+        .l6 {
+             background: #20603D;
+              color: white; 
+            }
+        .l6:hover {
+             background: #16452c;
+             }
+        .l5 {
+             background: #e2e8f0;
+              color: #64748b;
+             }
+             #ry{ 
+            background: #ebf8ff;
+             border-left: 4px solid skyblue;
+              padding: 15px;
+               margin-top: 15px;
+                font-size: 0.85rem;
+                width: 80%;
+                margin-left: 40px;
+             }
+    </style>
+</head>
+<body>
+
+<div class="l1">
+    <a href="Services.html">← Back to Services</a>
+    <h1>Employee Registration Form</h1>
+<div id="ry">
+           ⚠ <strong>Notice:</strong> Please ensure you <strong>Have a softcopy of your CV and application letter</strong> before starting
+        </div>
+    <form id="employeeForm" onsubmit="return work();" >
+        <h3>Personal Information</h3>
+        <div class="l2">
+            <div><label>First Name *</label><input type="text" id="ra"></div>
+            <div><label>Last Name *</label><input type="text" id="re" ></div>
+            <div><label>Date of Birth *</label><input type="date" id="ri" ></div>
+            <div><label>Gender *</label>
+                <select >
+                    <option value="">Select Gender</option>
+                    <option>Male</option><option>Female</option><option>Other</option>
+                </select>
+            </div>
+            <div><label>Email Address *</label><input type="email" id="ru" ></div>
+            <div><label>Phone Number *</label><input type="tel" id="rv" ></div>
+            <div><label>Nationality *</label><input type="text" id="rw" ></div>
+            <div><label>National ID / Passport *</label><input type="text" id="rx" ></div>
+        </div>
+
+        <h3>Contact Address</h3>
+        <div class="l2">
+            <div class="l3"><label>Street Address *</label><input type="text" id="st"></div>
+            <div><label>City *</label><input type="text" id="ci"></div>
+            <div><label>State/Province *</label><input type="text" id="sta"></div>
+            <div><label>Country *</label><input type="text" id="country" ></div>
+        </div>
+
+        <h3>Educational Qualifications</h3>
+        <div class="l2">
+            <div><label>Highest Degree *</label>
+                <select id="degree">
+                    <option value="">Select Degree</option>
+                    <option>Diploma</option><option>Bachelor's</option><option>Master's</option><option>Ph.D.</option>
+                </select>
+            </div>
+            <div><label>Field of Study *</label><input type="text" id="field" ></div>
+            <div><label>University *</label><input type="text" id="university" ></div>
+            <div><label>Upload your CV & Application Letter *</label><input type="file" accept=".pdf,.doc,.docx" id="cv" ></div>
+        </div>
+
+        <div class="l4">
+            <button type="submit" class="l6">Submit Application</button>
+        </div>
+    </form>
+</div>
+
+<script>
+ function work(){
+    var firstName = document.getElementById("ra").value;
+    var lastName = document.getElementById("re").value;
+    var email = document.getElementById("ru").value;
+    var phone = document.getElementById("rv").value;
+    var nationality = document.getElementById("rw").value;
+    var idNumber = document.getElementById("rx").value;
+    var street = document.getElementById("st").value;
+    var city = document.getElementById("ci").value;
+    var state = document.getElementById("sta").value;
+    var country = document.getElementById("country").value;
+    var degree = document.getElementById("degree").value;
+    var field = document.getElementById("field").value;
+    var university = document.getElementById("university").value;
+    var cvFile = document.getElementById("cv").files[0];
+    
+    if(!firstName || !lastName || !email || !phone || !nationality || !idNumber || !street || !city || !state || !country || !degree || !field || !university || !cvFile)
+    {
+        alert("Please fill in all required fields.");
+        return false;
+    }
+    else if(!firstName){
+        alert("Please enter your first name.");
+        return false;
+    }
+    else if(!lastName){
+        alert("Please enter your last name.");
+        return false;
+    }
+    else if(!email){
+        alert("Please enter a valid email address.");
+        return false;
+    }
+    else if(!phone){
+        alert("Please enter a valid phone number.");
+        return false;
+    }
+    else if(!nationality){
+        alert("Please enter your nationality.");
+        return false;
+    }
+    else if(!idNumber){
+        alert("Please enter your National ID or Passport number.");
+        return false;
+    }
+    else if(!street){
+        alert("Please enter your street address.");
+        return false;
+    }
+    else if(!city){
+        alert("Please enter your city.");
+        return false;
+    }
+    else if(!state){
+        alert("Please enter your state or province.");
+        return false;
+    }
+    else if(!country){
+        alert("Please enter your country.");
+        return false;
+    }
+    else if(!degree){
+        alert("Please select your highest degree.");
+        return false;
+    }
+    else if(!field){
+        alert("Please enter your field of study.");
+        return false;
+    }
+    else if(!university){
+        alert("Please enter your university.");
+        return false;
+    }
+    else if(!cvFile){
+        alert("Please upload your CV and application letter.");
+        return false;
+    }
+    else{
+        alert("Application submitted successfully! We will review your application and give you a feedback to you soon.");
+        return true;
+    }
+}
+ 
+</script>
+
+</body>
+</html>

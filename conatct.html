@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Excellence Academy Rwanda</title>
+    <style>
+        body{
+            margin: 0px;
+            padding: 0px;
+            background-image: url(back.png);
+            background-size: cover;
+        }
+        .l39{
+    height: 300px;
+    width: 100%;
+    background-color: #667eea;
+    margin-top: 60px;
+    margin-left: 0px;
+    position: sticky;
+
+}
+.l40{
+    border-radius: 70px;
+    height: 50px;
+    background-color: #d0d0d0;
+    width: 50px;
+    margin-left: 1250px;
+    background-image: url(lio.png);
+    background-size: cover;
+   
+}
+.l41{
+    border-radius: 70px;
+    height: 50px;
+    background-color: #d0d0d0;
+    width: 50px;
+    margin-left: 1120px;
+    margin-top: -50px;
+    background-image: url(face.png);
+    background-size: cover;
+   
+}
+.l42{
+    border-radius: 70px;
+    height: 50px;
+    background-color: #d0d0d0;
+    width: 50px;
+    margin-left: 1185px;
+    margin-top: -50px;
+    background-image: url(you.png);
+    background-size: cover;
+   
+}
+.l43{
+    margin-top: 55px;
+    position: absolute;
+    margin-left: 400px;
+    color: #d0d0d0;
+}
+.l44{
+    margin-top: -90px;
+    margin-left: 100px;
+    border-radius: 20px;
+    height: 200px;
+    width: 400px;
+    background-color: #28a745;
+}
+#BO{
+    position: absolute;
+    margin-left: 700px;
+    margin-top: 80px;
+    font-size: 15px;
+    
+}
+        .container {
+            max-width: 1100px;
+            margin: 60px auto 60px;
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 30px;
+            padding: 0 20px;
+        }
+
+        /* Info Sidebar */
+        .info-sidebar {
+            background: #00A1DE;
+            color: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+
+        .info-item { margin-bottom: 30px; }
+        .info-item h3 { font-size: 1.2rem; margin-bottom: 10px; color: var(--accent); }
+        .info-item p { font-size: 0.95rem; opacity: 0.9; }
+
+        /* Contact Form */
+        .contact-card {
+            
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+             height: 350px;
+            background: #e2e8f0;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid #cbd5e1;
+        }
+        .map-container {
+            grid-column: span 2;
+           
+        }
+        
+
+.menu-btn {
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 30px;
+    color: white;
+    
+}
+
+.menu-overlay {
+    height: 100%;
+    width: 0; 
+    top: 00px;
+    position: fixed;   
+    background-color: rgba(0, 0, 0, 0.95);
+    overflow-x: hidden;
+    padding-top: 60px;
+    transition: 0.1s;
+    
+}
+
+.menu-overlay.active {
+    width: 250px;
+    
+    border-bottom: 5px yellow solid;
+}
+
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px; 
+    font-size: 36px;
+    color: white;
+    cursor: pointer;
+}
+.close-btn:hover {
+    animation: spine 1s ease-in-out;
+   
+}
+@keyframes spine {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(360deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+.menu-links a {
+    padding: 15px 32px;
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+    font-family: Arial, sans-serif;
+}
+
+.menu-links a:hover {
+    color: #f1f1f1;
+    background-color: #333;
+    border-radius: 20px;
+    border-bottom: 5px yellow solid;
+}
+
+.menu-container {
+    display: flex;
+    align-items: center;
+}
+.l1 {
+    background: linear-gradient(#667eea,#764ba2);
+    width: 900px;
+    height: 10%;
+    margin-left: 250px;
+    border-radius: 60px;
+}
+
+.l2 {
+    display: flex;
+    flex-direction: row;      
+    justify-content: space-between; 
+    align-items: center;
+    padding-right: 30px;
+}
+
+.l3 {
+    margin-left: 100px;
+    font-size: 50px;
+    font-weight: bold;
+    color: var(--white);
+    gap: 10px;
+}
+
+
+        @media (max-width: 850px) {
+            .container { grid-template-columns: 1fr; margin-top: 20px; }
+            .map-container { grid-column: span 1; }
+        }
+    </style>
+</head>
+<body>
+<nav class="l1">
+    <div class="l2">
+        <div class="l3">
+            <span>Groupe Scolaire KABARE</span>
+        </div>
+        <div class="menu-container">
+            <span onclick="toggleMenu()" class="menu-btn">☰ Menu</span>
+        </div>
+    </div>
+</nav>
+<div class="container">
+    <div class="info-sidebar">
+        <div class="info-item">
+            <h3>Visit Us</h3>
+            <p>KN 5 Road, Nyarugenge District<br>Kigali, Rwanda<br>Near the New Modern Market</p>
+        </div>
+        <div class="info-item">
+            <h3>Call or WhatsApp</h3>
+            <p>Reception: +250 788 000 000<br>Admissions: +250 789 111 222</p>
+        </div>
+        <div class="info-item">
+            <h3>Email</h3>
+            <p>info@excellenceacademy.rw<br>admissions@excellenceacademy.rw</p>
+        </div>
+        <div class="info-item">
+            <h3>Office Hours</h3>
+            <p>Monday - Friday: 7:30 AM - 5:00 PM<br>Saturday: 9:00 AM - 12:00 PM</p>
+        </div>
+    </div>
+
+    <div class="contact-card">
+        <p style="color: #64748b; font-weight: 500;">
+            [ Interactive Map of Kigali Campus ]
+        </p>
+    </div>
+
+    <div class="map-container">
+        
+    </div>
+</div>
+<div id="menu" class="menu-overlay">
+        <span class="close-btn" onclick="toggleMenu()">x</span>
+        <div class="menu-links">
+            <a href="index.html">HOME</a>
+            <a href="About.html">ABOUT US</a>
+            <a href="academics.html">ACADEMICS</a>
+            <a href="Services.html">SERVICES</a>
+            <a href="admission.html">ADMISSION</a>
+            <a href="gallery.html">GALLERY</a>
+            <a href="conatct.html">CONTACT US</a>
+            <a href="help.html">HELP</a>
+        </div>
+    </div>
+ 
+<div class="l39">
+        <P id="BO"><b>YOU CAN ALSO FIND US ON SOCIAL MEDIA PLATFORMS:</b></P>
+        <br><br><br>
+        <div class="l40"></div>
+         <div class="l41"></div>
+          <div class="l42"></div>
+          <div class="l44"></div>
+          <p class="l43">&copy;COPYRIGHT GSKEBARE 2025-2026 OFFICIAL SCHOOL MANAGMENT WEBSITE</p>
+
+    </div>
+<script>
+    function toggleMenu() {
+            const menu = document.getElementById("menu");
+            menu.classList.toggle("active");
+        }
+    document.getElementById('contactForm').onsubmit = function(e) {
+        e.preventDefault();
+        alert("Thank you for reaching out! Your message has been sent. Our team will get back to you within 24 hours.");
+        this.reset();
+    };
+</script>
+
+</body>
+</html>

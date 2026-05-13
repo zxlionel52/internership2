@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academics | GS Kabare</title>
+    <link rel="stylesheet" type="text/css" href="cod.css">
+    <link rel="stylesheet" type="text/css" href="home.css">
+</head>
+<body>
+
+<nav class="l1">
+    <div class="l2">
+        <div class="l3">
+            <span>Groupe Scolaire KABARE</span>
+        </div>
+        <div class="menu-container">
+            <span onclick="toggleMenu()" class="menu-btn">☰ Menu</span>
+        </div>
+    </div>
+</nav>
+<div id="menu" class="menu-overlay">
+        <span class="close-btn" onclick="toggleMenu()">x</span>
+        <div class="menu-links">
+            <a href="home.html">HOME</a>
+            <a href="cod.html">ABOUT US</a>
+            <a href="academics.html">ACADEMICS</a>
+            <a href="Services.html">SERVICES</a>
+            <a href="admission.html">ADMISSION</a>
+            <a href="gallery.html">GALLERY</a>
+            <a href="conatct.html">CONTACT US</a>
+            <a href="help.html">HELP</a>
+            <input type="button" class="btn-login" onclick="window.location.href='index.html';" value="←LOGOUT">
+        </div>
+    </div>
+        
+<div class="g1">
+    <h2>Our Academic Structure</h2>
+    <p>At GS Kabare, we are committed to providing a robust academic foundation aligned with the Rwanda Education Board (REB) standards. Our students are prepared to excel in national examinations and beyond.</p>
+
+    <div class="g2">
+        <div class="g3">
+            <h3>Ordinary Level (S1 - S3)</h3>
+            <p>Focusing on a broad range of core competencies to build a strong foundation.</p>
+            <ul class="g4">
+                <li>• Mathematics & Sciences</li>
+                <li>• Languages (Kinyarwanda, English, French)</li>
+                <li>• Social Studies</li>
+                <li>• ICT & Computer Literacy</li>
+            </ul>
+        </div>
+
+        <div class="g3">
+            <h3>Advanced Level (S4 - S6)</h3>
+            <p>Specialized subject combinations tailored for career paths.</p>
+            <ul class="g4">
+                <li>• MCB (Math, Chem, Bio)</li>
+                <li>• PCM (Physics, Chem, Math)</li>
+                <li>• HEG (History, Econ, Geog)</li>
+                <li>• MEG (Math, Econ, Geog)</li>
+            </ul>
+        </div>
+    </div>
+
+    <h2>Examination Excellence</h2>
+    <p>Our students consistently perform well in National Examinations managed by NESA. We offer intensive remedial classes and study groups to ensure every student reaches their target grade.</p>
+
+    <div class="g5">
+        <h3>Daily Schedule (Typical)</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Time</th>
+                    <th>Activity</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>07:30 - 08:00</td><td>Morning Assembly</td></tr>
+                <tr><td>08:00 - 10:30</td><td>Morning Classes (Core Subjects)</td></tr>
+                <tr><td>10:30 - 11:00</td><td>Break Time</td></tr>
+                <tr><td>11:00 - 13:00</td><td>Mid-day Lessons</td></tr>
+                <tr><td>13:00 - 14:00</td><td>Lunch Break</td></tr>
+                <tr><td>14:00 - 17:00</td><td>Practical Labs / Sports / Clubs</td></tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<div class="l39">
+        <P id="BO"><b>YOU CAN ALSO FIND US ON SOCIAL MEDIA PLATFORMS:</b></P>
+        <br><br><br>
+        <div class="l40"></div>
+         <div class="l41"></div>
+          <div class="l42"></div>
+          <div class="l44"></div>
+          <p class="l43">&copy;COPYRIGHT GSKEBARE 2025-2026 OFFICIAL SCHOOL MANAGMENT WEBSITE</p>
+
+    </div>
+<script>
+        function toggleMenu() {
+            const menu = document.getElementById("menu");
+            menu.classList.toggle("active");
+        }
+    </script> 
+</body>
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GS KABARE</title>
+    <link rel="stylesheet" type="text/css" href="home.css">
+       
+</head>
+<body>
+
+<div class="l45">
+    <div class="l46">
+        <h1>EXCELLENCE ACADEMY RWANDA</h1>
+        <p>SECONDARY SCHOOL ADMISSION PORTAL</p>
+    </div>
+
+    <div class="l47">
+        <div class="l48">
+            <strong>Notice:</strong> Please ensure you have your <strong>Primary Leaving Education (PLE)</strong> or <strong>O-Level National Exam</strong> results ready before starting.
+        </div>
+
+        <form onsubmit="return form()">
+            <h2 class="l49">Student Identity</h2>
+            <div class="l50">
+                <div class="l51">
+                    <label>Given Name(s)</label>
+                    <input type="text" name="fname" placeholder="Ex: Jean Luc" id="a">
+                </div>
+                <div class="l51">
+                    <label>Surname</label>
+                    <input type="text" name="lname" placeholder="Ex: HABIMANA" id="b">
+                </div>
+                <div class="l51">
+                    <label>Gender</label>
+                    <select name="gender">
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                    </select>
+                </div>
+                <div class="l51">
+                    <label>Date of Birth</label>
+                    <input type="date" name="dob" id="c">
+                </div>
+            </div>
+
+            <h2 class="l49">National Examination Details</h2>
+            <div class="l50">
+                <div class="l51">
+                    <label>National Exam Index Number</label>
+                    <input type="text" placeholder="Ex: 401020302022" id="d">
+                </div>
+                <div class="l51">
+                    <label>Applying for Level</label>
+                    <select id="levelSelect" onchange="toggleCombinations()">
+                        <option value="O-Level">O-Level (S1, S2, S3)</option>
+                        <option value="A-Level">A-Level (S4, S5, S6)</option>
+                    </select>
+                </div>
+                <div class="l51" id="combinationGroup" style="display:none;">
+                    <label>A-Level Combination Choice</label>
+                    <select>
+                        <option>MCB (Math, Chem, Bio)</option>
+                        <option>PCM (Physics, Chem, Math)</option>
+                        <option>HEG (History, Econ, Geog)</option>
+                        <option>MEG (Math, Econ, Geog)</option>
+                        <option>PCB (Physics, Chem, Bio)</option>
+                    </select>
+                </div>
+                <div class="l51">
+                    <label>Previous School Attended</label>
+                    <input type="text" placeholder="Ex: GS Nyarugenge" id="e">
+                </div>
+            </div>
+
+            <h2 class="l49">Parent / Guardian Information</h2>
+            <div class="l50">
+                <div class="l51">
+                    <label>Parent Name</label>
+                    <input type="text" id="f">
+                </div>
+                <div class="l51">
+                    <label>Contact Phone (WhatsApp preferred)</label>
+                    <input type="tel" placeholder="078... or 079..." id="g">
+                </div>
+                <div class="l51">
+                    <label>District of Residence</label>
+                    <input type="text" placeholder="Ex: Gasabo" id="h">
+                </div>
+            </div>
+
+            <div class="l52">
+                <button type="submit" class="l53">Submit Application</button>
+            </div>
+        </form>
+    </div>
+</div>
+<div class="l39">
+        <P id="BO"><b>YOU CAN ALSO FIND US ON SOCIAL MEDIA PLATFORMS:</b></P>
+        <br><br><br>
+        <div class="l40"></div>
+         <div class="l41"></div>
+          <div class="l42"></div>
+          <div class="l44"></div>
+          <p class="l43">&copy;COPYRIGHT GSKEBARE 2025-2026 OFFICIAL SCHOOL MANAGMENT WEBSITE</p>
+
+    </div>
+<script>
+    function toggleCombinations() {
+        const level = document.getElementById('levelSelect').value;
+        const comboGroup = document.getElementById('combinationGroup');
+        if (level === "A-Level") {
+            comboGroup.style.display = "block";
+        } else {
+            comboGroup.style.display = "none";
+        }
+    }
+function form(){
+    var fname=document.getElementById("a").value;
+    var lname=document.getElementById("b").value;
+    var dob=document.getElementById("c").value;
+    var index=document.getElementById("d").value;
+    var school=document.getElementById("e").value;
+    var parent=document.getElementById("f").value;
+    var phone=document.getElementById("g").value;
+    var district=document.getElementById("h").value;
+    
+    if(!fname||!lname||!dob||!index||!school||!parent||!phone||!district){
+        alert("Please fill in all required fields.");
+        return false;
+    }
+    else if(index.length >15||index.length <10){
+        alert("please fill in a vailed index number");
+        return false;
+    }
+    else if(phone.length !=10){
+        alert("please fill in a vailed phone number");
+        return false;
+     }
+     else{
+        alert("Application submitted successfully!");
+        return true;
+     }
+}
+    
+</script>
+
+</body>
+</html>

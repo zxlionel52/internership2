@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STUDENT REGISTRATION FORM</title>
+    <link rel="stylesheet" type="text/css" href="student.css">
+</head>
+<body>   
+    <div id="l56">
+        <div id="ro">
+            <button class="r3"><a href="Services.html"> ↩BACK TO SERVICES</a></button>
+        <h1>STUDENT REGISTRATION FORM</h1>
+        <p>SECONDARY SCHOOL REGISTRATION PORTAL</p>
+        
+        </div>
+        <div id="ra">
+           ⚠ <strong>Notice:</strong> Please ensure you <strong>COMPLITED THE ADIMISSION FORM AND YOU RECIEVED AN SMS FROM OUR ADMISSION</strong> or <strong>AN APROOVAL FROM OUR OFFICE</strong>if you have that your are ready to start.
+        </div>
+        <form id="l57">
+            <p class="w">NAMES:*Shyiramo amazina watanze hambere(in admission)</p>
+            <input type="text" placeholder="Enter full names please" id="op" class="l60"><br>
+            <p class="w">AGE:*Shyiramo imyaka ihura nigihe wavukiye</p>
+            <input type="number" placeholder="Enter your age please" id="up" class="l60"><br>
+            <p class="w">GENDER:*Shyiramo igistina watanze hambere(in admission)</p>
+             <input type="radio" name="gender" id="yp">MALE<br>
+              <input type="radio" name="gender" id="yp">FEMALE<br>
+              <p class="w"> STUDENT PIC:*Shyiramo ifoto yumunyeshuri wiyandikishije(ifoto ya pasiporo)</p>
+                 <input type="file" id="fp" class="l60" >
+            
+            <p class="w">PROVINCE:*Shyiramo intara uturukamo</p>
+            <select class="l60" id="rp">
+                <option>select the province you came from</option>
+                <option>NORTHERN PROVINCE</option>
+                <option>SOUTHERN PROVINCE</option>
+                <option>EASTERN PROVINCE</option>
+                <option>WESTERN PROVINCE</option>
+                <option>KIGALI CITY</option>
+            </select><br>
+              <p class="w">PARENTS:*Hitomo ababyeyi ufite</p>
+               <input type="checkbox" id="xp" >FATHER<br>
+                <input type="checkbox" id="xp" >MOTHER
+                 <input type="checkbox" id="xp">NONE<br>
+                <p class="w">PARENTS NUMBER:*Shyiramo nimero zumubyeyi watanze hambere(in admission)</p>
+                 <input type="number" placeholder="your parents phone number please" id="zp" class="l60"><br> 
+                <p class="w">PARENTS ID:*Shyiramo nimero zirangamuntu y'umubyeyi</p>
+                 <input type="number" placeholder="your parents id please" id="mp" class="l60"><br><br>
+                <div id="re">
+              <input type="button"  onclick="li();" value="REGISTER NOW" id="cp" class="l61" >
+</div>
+        </form>
+        
+        <div id="sp"></div>
+    </div>
+          
+    <div class="l39">
+        <P id="BO"><b>YOU CAN ALSO FIND US ON SOCIAL MEDIA PLATFORMS:</b></P>
+        <br><br><br>
+        <div class="l40"></div>
+         <div class="l41"></div>
+          <div class="l42"></div>
+          <div class="l44"></div>
+          <p class="l43">&copy;COPYRIGHT GSKEBARE 2025-2026 OFFICIAL SCHOOL MANAGMENT WEBSITE</p>
+
+    </div>
+    <script>
+function li() {
+    const name = document.getElementById("op").value;
+    const age = document.getElementById("up").value;
+    const province = document.getElementById("rp").value;
+    const parentPhone = document.getElementById("zp").value;
+    const parentId = document.getElementById("mp").value;
+
+    let gender = document.querySelector('input[name="gender"]:checked');
+    let messageBox = document.getElementById("sp");
+
+   
+    messageBox.style.display = "block";
+
+    
+    if (!name || !age || !province || !parentPhone || !parentId) {
+        messageBox.style.background = "red";
+        messageBox.innerHTML = "Please fill all required fields.";
+        return false;
+    }
+
+    if (parentId.length < 16) {
+        messageBox.style.background = "red";
+        messageBox.innerHTML = "ID must be 16 digits.";
+        return false;
+    }
+
+    if (age < 5 || age > 30) {
+        messageBox.style.background = "red";
+        messageBox.innerHTML = "Age must be between 5 and 30.";
+        return false;
+    }
+
+    if (parentPhone.length < 10) {
+        messageBox.style.background = "red";
+        messageBox.innerHTML = "Enter a valid phone number.";
+        return false;
+    }
+
+    messageBox.style.background = "green";
+    messageBox.innerHTML =`
+        Registration Successful!<br>
+        Name: ${name}<br>
+        Age: ${age}<br>
+        other details needed will be complited at our headquotal.
+    `;
+    setTimeout(() => {
+        messageBox.style.display = "none";
+    }, 5000);
+
+    return true;
+}
+</script>
+</body>
+</html>
